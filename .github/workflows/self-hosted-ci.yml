@@ -29,4 +29,4 @@ jobs:
       run: npm install --force
 
     - name: Run tests
-      run: npm test -- --watch=false --browsers=ChromeHeadless --no-progress
+      run: export CHROME_BIN=/usr/bin/chromium-browser && npm test -- --watch=false --browsers=ChromeHeadless --no-progress
