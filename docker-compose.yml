@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   # Environnement de production
-  production:
+  app-staging:
     image: angular-app:staging
     container_name: app-staging
     ports:
