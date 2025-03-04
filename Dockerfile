@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install --force
 COPY . .
-RUN npm run build -- --configuration production
+RUN npm run build
 
 # Étape 2: Servir l'application avec NGINX
 FROM nginx:alpine
