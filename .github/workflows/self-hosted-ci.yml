@@ -42,7 +42,6 @@ jobs:
 
   docker-build:
     runs-on: self-hosted
-    needs: build-and-test
 
     steps:
     - name: Checkout repository
@@ -63,7 +62,7 @@ jobs:
 
   cleanup:
     runs-on: self-hosted
-    needs: [build-and-test, docker-build]
+    needs: [docker-build]
     if: always()
 
     steps:
